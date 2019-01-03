@@ -6,7 +6,7 @@ void setup()
 {
   size(600, 600);
   rectMode(CENTER);
-  spec_test = new Species(200, 200, 20, 20, 0, 0, 0, 0.01);
+  spec_test = new Species(200, 200, 20, 20, 0, 0, 0, 0.01, null);
 }
 
 void draw()
