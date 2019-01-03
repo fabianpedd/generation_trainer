@@ -1,5 +1,9 @@
 class Species
 {
+  
+  int number_of_springs;
+  Spring[] springs;
+  
   float x, y; // position
   float breite, hoehe; // dimension
   float vx, vy; // velocity
@@ -11,6 +15,9 @@ class Species
   final float h = 0.5;
   
   public Species(float x, float y, float breite, float hoehe, float vx, float vy, float alpha, float omega)
+
+  public Species(float x, float y, float breite, float hoehe, float vx, float vy, 
+  float alpha, float omega, Spring[] springs)
   {
     this.x = x;
     this.y = y;
@@ -21,6 +28,14 @@ class Species
     this.alpha = alpha;
     this.omega = omega;
     l = m * breite * hoehe;
+    this.springs = springs;
+  }
+  
+  //todo: delete all that this species has ever drawn or done
+  //basically a destructor, but keep parameters so we can modify them
+  void erase() 
+  {
+    
   }
   
   void step()
@@ -66,5 +81,15 @@ class Species
     rotate(alpha);
     rect(0, 0, breite * 2, hoehe * 2);
     popMatrix();
+  }
+  
+  float getX() 
+  {
+    return x;
+  }
+  
+  float getY() 
+  {
+    return y;
   }
 }
