@@ -1,4 +1,3 @@
-Species spec;
 Species spec_test;
 
 

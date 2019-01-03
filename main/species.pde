@@ -14,7 +14,6 @@ class Species
   float l = 0.5;
   final float h = 0.5;
   
-  public Species(float x, float y, float breite, float hoehe, float vx, float vy, float alpha, float omega)
 
   public Species(float x, float y, float breite, float hoehe, float vx, float vy, 
   float alpha, float omega, Spring[] springs)
