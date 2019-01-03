@@ -25,10 +25,15 @@ class Species
     y += vy;
     alpha += omega;
     vy += gravity;
+    
   }
   
   void paint()
   {
+    pushMatrix();
+    translate(x, y);
+    rotate(alpha);
     rect(0, 0, breite, hoehe);
+    popMatrix();
   }
 }
